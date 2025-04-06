@@ -38,13 +38,16 @@
       transform: translateX(-50%);
       z-index: 1000;
       background: #fff;
-      padding: 10px 20px;
-      border-radius: 8px;
+      padding: 12px 40px;
+      border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
     }
 
     nav a {
-      margin: 0 15px;
       text-decoration: none;
       font-weight: 400;
       color: #000;
@@ -78,15 +81,29 @@
       margin-top: 1.5rem;
     }
 
-    .home-image {
-      margin-top: 30px;
+    .project-gallery {
+      margin-top: 2rem;
+    }
+
+    .project-gallery figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .project-gallery img {
       width: 300px;
-      height: auto;
-      filter: grayscale(100%);
+      height: 400px;
+      object-fit: cover;
       border-radius: 8px;
     }
 
-    .project-gallery, .image-gallery {
+    .project-gallery figcaption {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .image-gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
@@ -94,22 +111,16 @@
       margin-top: 2rem;
     }
 
-    .project-gallery div, .image-gallery img {
+    .image-gallery img {
       width: 300px;
       height: 400px;
-      background-color: #eee;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-
-    .image-gallery img {
       object-fit: cover;
+      background-color: #eee;
+      border-radius: 8px;
     }
 
     .extra-space {
-      margin-top: 250px;
+      margin-top: 280px;
     }
 
     footer {
@@ -138,7 +149,6 @@
 
 <section id="home">
   <div class="title">PORTFOLIO</div>
-  <img src="images/home-image.jpg" >
   <div class="subtitle">Jolin Li</div>
 </section>
 
@@ -156,21 +166,28 @@
 <section id="marketing">
   <div class="title">Marketing</div>
   <div class="project-gallery">
-    <div>Social Campaign</div>
-    <div>Brand Launch</div>
+    <figure style="display: flex; flex-direction: column; align-items: center;">
+      <img src="social-campaign.jpg" alt="Marketing Project"
+           style="max-width: 300px; max-height: 400px; object-fit: contain; border-radius: 8px;">
+     <figcaption style="margin-top: 10px; font-weight: bold; font-size: 1.3rem;">
+  Featured Marketing Project
+</figcaption>
+       <p style="margin-top: 20px; font-size: 0.95rem; max-width: 280px; color: #444;">
+       An assignment where we rebranded an existing company. I chose Flipper’s, a Japanese pancake brunch restaurant, and gave it a more playful identity by incorporating elements of Japanese culture and soft, cheerful design.
+      </p>
+    </figure>
   </div>
 </section>
 
-<section id="ux" class="extra-space">
+
+<section id="ux">
   <div class="title">UX Design</div>
-  <div class="image-gallery">
-    <img src="images/image1.jpg" alt="UX Work 1">
-    <img src="images/image2.jpg" alt="UX Work 2">
-    <img src="images/image3.jpg" alt="UX Work 3">
-    <img src="images/image4.jpg" alt="UX Work 4">
-    <img src="images/image5.jpg" alt="UX Work 5">
-  </div>
+  <video width="400" height="700" controls style="margin-top: 40px; border-radius: 12px;">
+    <source src="studyhub.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </section>
+
 
 <section id="contact">
   <div class="title">Let's Connect</div>
